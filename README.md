@@ -1,32 +1,3 @@
-# Google Keep Clone
-
-This is a **clone** of **Google Keep**.
-
-<div>
-  <table><tr><td>
-  <img alt="home_page" title="Home page" src="/readme-images/gkc-home.png">
-  </td></tr></table>
-  <table><tr><td>
-  <img alt="signup_page" title="Signup page" src="/readme-images/gkc-signup.png">
-  </td></tr></table>
-  <table ><tr>
-    <td><img alt="signin_email" title="Signin email" src="/readme-images/gkc-signin_email.png"></td>
-    <td><img alt="signin_password" title="Signin password" src="/readme-images/gkc-signin_pass.png"></td>
-  </tr></table>
-</div><br>
-
-## Technologies used
-
-* [React](https://reactjs.org/)
-* [Nodejs](https://nodejs.org/en/)
-* [Expressjs](https://expressjs.com/)
-* [MongoDB](https://www.mongodb.com)
-* [Mongoose](http://mongoosejs.com/)
-* [MaterialUI](https://material-ui.com)
-* [Hooks](https://reactjs.org/docs/hooks-intro.html)
-* [Redux](https://redux.js.org/)
-
-______
 
 ## For Developers
 
