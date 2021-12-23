@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import LoginEmail from './Containers/login/email/login-email';
 import LoginPassword from './Containers/login/password/login-password';
 import SignUp from './Containers/signup/signup';
-// import Layout from './hoc/Layout/Layout';
-import HomeView from './Containers/HomeView/HomeView';
+import Home from './Containers/home/home';
 import Auxiliary from './hoc/Auxiliary/Auxiliary';
 
 class App extends Component{
@@ -23,16 +22,14 @@ class App extends Component{
       </Switch>
     )
     
-    if(this.props.isAuthenticated){
+    // if(this.props.isAuthenticated){
       routes=(
-        // <Layout>
           <Switch>
-            <Route path="/" exact component={HomeView} />
+            <Route path="/" exact component={Home} />
             <Redirect to="/" />
           </Switch>
-        // </Layout>
       )
-    }
+    // }
     return(
         <Auxiliary>
           {routes}
