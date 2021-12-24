@@ -22,14 +22,14 @@ class App extends Component{
       </Switch>
     )
     
-    // if(this.props.isAuthenticated){
+    if(this.props.isAuthenticated){
       routes=(
           <Switch>
             <Route path="/" exact component={Home} />
             <Redirect to="/" />
           </Switch>
       )
-    // }
+    }
     return(
         <Auxiliary>
           {routes}
