@@ -19,6 +19,7 @@ class Home extends Component {
   };
 
   async componentDidMount() {
+    debugger
     // API call
     // params => api key , page , query
     // https://api.themoviedb.org/3/search/movie?api_key=bdd243ea847239dc0799805e63e189f0&query=avengers&page=1&include_adult=false
@@ -57,7 +58,7 @@ class Home extends Component {
   };
 
   nextPage = async () => {
-    let data = await axios.get(API_URL + "/search/movie", {
+    let data =  axios.get(API_URL + "/search/movie", {
       params: {
         api_key: API_KEY,
         page: this.state.currPage + 1,
@@ -73,7 +74,7 @@ class Home extends Component {
   };
 
   previousPage = async () => {
-    let data = await axios.get(API_URL + "/search/movie", {
+    let data =  axios.get(API_URL + "/search/movie", {
       params: {
         api_key: API_KEY,
         page: this.state.currPage - 1,
@@ -89,7 +90,7 @@ class Home extends Component {
   };
 
   setPage = async (pageCount) => {
-    let data = await axios.get(API_URL + "/search/movie", {
+    let data = axios.get(API_URL + "/search/movie", {
       params: {
         api_key: API_KEY,
         page: pageCount,

@@ -123,7 +123,18 @@ class SignUp extends Component{
                                                     type="text"
                                                     autoFocus
                                                     size="small"
-                                                    onChange={(event)=>this.handleChange(event,"firstName")}
+                                                    value={this.state.value}
+                                                    onChange={e => {
+                                                    
+                                                        let value = e.target.value;
+
+                                                        value = value.replace(/[^A-Za-z]/gi, "");
+                                    
+                                                        this.setState({
+                                                            value
+                                                        });
+                                                    }}
+                                    
                                                 />
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
@@ -135,7 +146,17 @@ class SignUp extends Component{
                                                     label="Last name"
                                                     type="text"
                                                     size="small"
-                                                    onChange={(event)=>this.handleChange(event,"lastName")}
+                                                    value={this.state.value}
+                                                    onChange={e => {
+                                                    
+                                                        let value = e.target.value;
+
+                                                        value = value.replace(/[^A-Za-z]/gi, "");
+                                    
+                                                        this.setState({
+                                                            value
+                                                        });
+                                                    }}
                                                 />
                                             </Grid>
                                         </Grid>
@@ -164,6 +185,7 @@ class SignUp extends Component{
                                                     type={this.state.showPassword ? 'text' : 'password'}
                                                     value={this.state.user.password}
                                                     onChange={(event)=>this.handleChange(event,"password")}
+                                             inputProps={{maxLength : 8} }
                                                     endAdornment={
                                                     <InputAdornment position="end">
                                                         <IconButton
@@ -185,6 +207,7 @@ class SignUp extends Component{
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
+                                                    inputProps={{maxLength : 8} }
                                                     id="Confirm"  
                                                     label="Confirm"
                                                     type="text"
@@ -213,12 +236,12 @@ class SignUp extends Component{
                                     </form>
                                 </CardActions>
                             </Grid>
-                            <Grid item md={5} className={classes.accountImage} >
+                            {/* <Grid item md={5} className={classes.accountImage} >
                                 <img alt="account icon"
                                     src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Google_account_icon.svg/1200px-Google_account_icon.svg.png"
                                     className={classes.accountIcon}
                                 />
-                            </Grid>
+                            </Grid> */}
                         </Grid>
                     </div>
                 </Card>

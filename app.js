@@ -9,7 +9,7 @@ require("dotenv").config();
 //ROUTES
 const indexRoute  = require("./routes/index");
 
-//mongoose.connect(process.env.DATABASEURL,{ useUnifiedTopology: true ,useNewUrlParser:true});
+mongoose.connect(process.env.DATABASEURL,{ useUnifiedTopology: true ,useNewUrlParser:true});
 mongoose.set("useFindAndModify",false);
 mongoose.set("useCreateIndex",true);
 
